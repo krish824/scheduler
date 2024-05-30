@@ -52,7 +52,7 @@ export default function Home() {
       endTime = date.toISOString();
     }
 
-    const data = await fetch("http://127.0.0.1:1880/schedule-appointment", {
+    const data = await fetch("http://ec2-13-54-158-176.ap-southeast-2.compute.amazonaws.com:1880/#flow/28caa05e3cd5ada2/schedule-appointment", {
       method: "POST",
       body: JSON.stringify({
         endTime: endTime,
