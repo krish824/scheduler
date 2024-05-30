@@ -52,7 +52,7 @@ export default function Home() {
       endTime = date.toISOString();
     }
 
-    const data = await fetch("http://ec2-13-54-158-176.ap-southeast-2.compute.amazonaws.com:1880/#flow/28caa05e3cd5ada2/schedule-appointment", {
+    const data = await fetch("/api/schedule-appointment", {
       method: "POST",
       body: JSON.stringify({
         endTime: endTime,
@@ -163,7 +163,9 @@ export default function Home() {
                 </svg>
                 <span class="sr-only">Info</span>
                 <div>
-                  <span class="font-medium">Success! Your appointment is confirmed!</span>
+                  <span class="font-medium">
+                    Success! Your appointment is confirmed!
+                  </span>
                 </div>
               </div>
             </div>
